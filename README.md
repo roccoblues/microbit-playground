@@ -14,4 +14,8 @@ Temperature: 26.2
 
 ## [balance](src/bin/balance.rs)
 
-Uses the accelerometer on the micro:bit to "balance" a led on the board. Flash with `cargo fl balance`.
+Uses the accelerometer on the micro:bit to "balance" a led on the board.
+
+## [punch](src/bin/punch.rs)
+
+Punch-o-meter solution from the rust embedded [discovery](https://docs.rust-embedded.org/discovery/microbit/10-punch-o-meter/index.html) book.

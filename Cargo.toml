@@ -20,6 +20,7 @@ defmt-rtt = "0.3.0"
 panic-probe = { version = "0.3.0", features = ["print-defmt"] }
 microbit-v2 = "0.13.0"
 lsm303agr = "0.2.2"
+nb = "1.0.0"
 
 [dev-dependencies]
 defmt-test = "0.3.0"

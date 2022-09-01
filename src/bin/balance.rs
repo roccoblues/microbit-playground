@@ -1,3 +1,4 @@
+#![deny(unsafe_code)]
 #![no_main]
 #![no_std]
 
@@ -7,11 +8,11 @@ use microbit::{
 };
 use microbit_playground as _;
 
-const THRESHOLD: i32 = 25;
-const INTERVAL: u32 = 100;
-
 #[cortex_m_rt::entry]
 fn main() -> ! {
+    const THRESHOLD: i32 = 50;
+    const INTERVAL: u32 = 100;
+
     let board = microbit::Board::take().unwrap();
     let i2c = { twim::Twim::new(board.TWIM0, board.i2c_internal.into(), FREQUENCY_A::K100) };
 
