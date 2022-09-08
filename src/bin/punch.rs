@@ -2,7 +2,7 @@
 #![no_main]
 #![no_std]
 
-use lsm303agr::{AccelOutputDataRate, AccelScale, Lsm303agr};
+use lsm303agr::{AccelMode, AccelOutputDataRate, AccelScale, Lsm303agr};
 use microbit::{hal::twim, pac::twim0::frequency::FREQUENCY_A};
 
 use microbit::hal::prelude::*;
@@ -23,6 +23,7 @@ fn main() -> ! {
     sensor.init().unwrap();
     sensor.set_accel_odr(AccelOutputDataRate::Hz50).unwrap();
     sensor.set_accel_scale(AccelScale::G16).unwrap();
+    sensor.set_accel_mode(AccelMode::HighResolution).unwrap();
 
     let mut max_g = 0.;
     let mut measuring = false;
